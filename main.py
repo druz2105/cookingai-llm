@@ -5,7 +5,7 @@ from llm.analysis import RecipeModel
 from utils.parser import parse_query
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173"}})
+CORS(app)
 
 
 # A POST endpoint that accepts JSON data
@@ -25,4 +25,4 @@ def echo():
 
 # Start the Flask application
 if __name__ == '__main__':
-    app.run(debug=True)
+      app.run(host="0.0.0.0", port=5000)

@@ -10,8 +10,8 @@ from langchain.chains import RetrievalQA
 from utils.spoon_api import *
 
 load_dotenv()
-openai_key = os.getenv("openai_key")
-os.environ['OPENAI_API_KEY'] = openai_key
+# OPENAI_KEY = os.getenv("OPENAI_KEY")
+# os.environ['OPENAI_API_KEY'] = OPENAI_KEY
 
 
 class RecipeModel:
@@ -31,7 +31,7 @@ class RecipeModel:
         self.set_chain()
 
     def get_recipe_urls(self, dish):
-        response_urls = get_spoonacular_recipe(dish, 5)
+        response_urls = get_spoonacular_recipe(dish, 3)
         self.recipe_urls = response_urls
 
     def set_loader(self):
