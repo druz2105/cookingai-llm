@@ -1,0 +1,11 @@
+.idea/
+__pycache__/
+node_modules/
+dist/
+build/
+logs/
+*.log
+.env
+venv/
+.gitignore/
+.git/
